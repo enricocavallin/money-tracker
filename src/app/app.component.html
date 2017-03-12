@@ -1,3 +1,20 @@
-<h1>
-  {{title}}
-</h1>
+<div flex-gt-sm="50" flex>
+
+  <md-toolbar layout="row" class="md-hue-3">
+    <div class="md-toolbar-tools">
+      <span>Operations</span>
+    </div>
+  </md-toolbar>
+
+  <div>
+    <md-list flex>
+      <md-list-item class="md-3-line" *ngFor="let item of items" ng-click="null">
+        <div class="md-list-item-text" layout="column">
+          <!--<h3>{{ item.title }}</h3>-->
+          <!--<h4>{{ item.subtitle }}</h4>-->
+          <p>{{ item.description }}</p>
+        </div>
+      </md-list-item>      
+    </md-list>
+  </div>
+</div>
