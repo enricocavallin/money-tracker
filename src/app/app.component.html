@@ -1,20 +1,25 @@
-<div flex-gt-sm="50" flex>
+<md-sidenav-container>
+  <md-sidenav mode="side" opened="true">
+    <ul>
+      <li>Ciao</li>
+      <li>Ciao</li>      
+    </ul>
+  </md-sidenav>
 
-  <md-toolbar layout="row" class="md-hue-3">
-    <div class="md-toolbar-tools">
-      <span>Operations</span>
-    </div>
-  </md-toolbar>
+<md-toolbar color="primary">
+  <span>Application Title</span>
 
-  <div>
-    <md-list flex>
-      <md-list-item class="md-3-line" *ngFor="let item of items" ng-click="null">
-        <div class="md-list-item-text" layout="column">
-          <!--<h3>{{ item.title }}</h3>-->
-          <!--<h4>{{ item.subtitle }}</h4>-->
-          <p>{{ item.description }}</p>
-        </div>
-      </md-list-item>      
-    </md-list>
-  </div>
-</div>
+  <!-- This fills the remaining space of the current row -->
+  <span class="example-fill-remaining-space"></span>
+
+  <span>Right Aligned Text</span>
+</md-toolbar>
+
+  <md-list flex>
+    <md-list-item class="md-3-line" layout="column" *ngFor="let item of items" ng-click="null">
+        <md-icon md-font-icon="trending_down"></md-icon>
+        <p>{{ item.description }}</p>
+    </md-list-item> 
+  </md-list>      
+
+</md-sidenav-container>
